@@ -7,7 +7,7 @@ SRC_FILES = Test$(LAB_ID).java
 
 JAVA  = java
 
-CLASSPATH = .:../lib/junit.jar
+CLASSPATH = ".;../lib/junit.jar"
 
 compile:
 	$(JAVAC) $(JAVAC_FLAGS) -cp $(CLASSPATH) *.java
