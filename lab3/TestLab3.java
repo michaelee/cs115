@@ -22,18 +22,18 @@ public class TestLab3 {
   
   @Test
   public void testCelsiusToFahr() {
-    assertEquals(0,    sm.celsiusToFahr(32), DELTA);
-    assertEquals(100,  sm.celsiusToFahr(212), DELTA);
-    assertEquals(-40,  sm.celsiusToFahr(-40), DELTA);
-    assertEquals(36.8, sm.celsiusToFahr(98.24), DELTA);
+    assertEquals(212, sm.celsiusToFahr(100), DELTA);
+    assertEquals(0,   sm.celsiusToFahr(-17.778), DELTA);
+    assertEquals(-40, sm.celsiusToFahr(-40), DELTA);
+    assertEquals(23,  sm.celsiusToFahr(-5), DELTA);
   }
   
   @Test
   public void testFahrToCelsius() {
-    assertEquals(212, sm.fahrToCelsius(100), DELTA);
-    assertEquals(0,   sm.fahrToCelsius(-17.778), DELTA);
-    assertEquals(-40, sm.fahrToCelsius(-40), DELTA);
-    assertEquals(23,  sm.fahrToCelsius(-5), DELTA);
+    assertEquals(0,    sm.fahrToCelsius(32), DELTA);
+    assertEquals(100,  sm.fahrToCelsius(212), DELTA);
+    assertEquals(-40,  sm.fahrToCelsius(-40), DELTA);
+    assertEquals(36.8, sm.fahrToCelsius(98.24), DELTA);
   }
   
   @Test
@@ -45,9 +45,9 @@ public class TestLab3 {
 
   @Test
   public void testVariance() {
-    assertEquals(0,    sm.variance(5, 5, 5, 5, 5), DELTA);
-    assertEquals(0.7,  sm.variance(3, 3, 4, 4, 5), DELTA);
-    assertEquals(16.2, sm.variance(10, 10, 15, 18, 18), DELTA);
+    assertEquals(0,     sm.variance(5, 5, 5, 5, 5), DELTA);
+    assertEquals(0.56,  sm.variance(3, 3, 4, 4, 5), DELTA);
+    assertEquals(12.96, sm.variance(10, 10, 15, 18, 18), DELTA);
   }
 
   @Test
@@ -77,10 +77,10 @@ public class TestLab3 {
 
   @Test
   public void testAge() {
+    assertEquals(1,  sm.age(1, 1, 2008));
+    assertEquals(20, sm.age(1, 1, 1989));
     assertEquals(0,  sm.age(1, 1, 2009));
     assertEquals(0,  sm.age(12, 31, 2008));
-    assertEquals(30, sm.age(9, 22, 1978));
-    assertEquals(20, sm.age(1, 1, 1989));
     assertEquals(19, sm.age(3, 10, 1989));
   }
 }
