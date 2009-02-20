@@ -2,8 +2,8 @@ class Bicycle {
   double wheel_diam; // diameter of the bicycle wheels (in inches)
   double multiplier; // gear multiplier
   double distance;   // total distance traveled (in miles)
-  int cadence = 0;   // current pedaling cadence (in rotations/min)
-  int gear = 1;      // current gearing
+  int cadence;       // current pedaling cadence (in rotations/min)
+  int gear;          // current gearing
   
   public Bicycle(double diam, double mul) {
     wheel_diam = diam;
