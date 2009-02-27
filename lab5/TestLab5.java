@@ -8,7 +8,7 @@ public class TestLab5 {
   public void testAccessors() {
     Bicycle bike = new Bicycle(29.5, 1.5);
     assertEquals(1, bike.getGear());
-    assertEquals(0, bike.getCadence());
+    assertEquals(1, bike.getCadence());
     bike.changeCadence(50);
     bike.gearUp();
     bike.gearUp();
